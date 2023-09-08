@@ -1,9 +1,8 @@
 import "./CalendarPage.css"
 
-import { faCalendar, faCalendarDay } from '@fortawesome/free-solid-svg-icons'
+import { CalendarBtn, ExampleGrid } from "../components";
 
 import { CalendarApp } from '../CalendarApp'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Modal from 'react-modal';
 import { useState } from "react";
 
@@ -12,8 +11,6 @@ export const CalendarPage = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [calendarIsOpen, setCalendarIsOpen] = useState(false);
     
-
-
     function openModal() {
         if(calendarIsOpen){
             setCalendarIsOpen(false);
@@ -37,7 +34,9 @@ export const CalendarPage = () => {
     return (
         <>
             <h1>Calendario App</h1>
-            
+            <hr/>
+            <ExampleGrid/>     
+
             {
                 calendarIsOpen &&                
                 <div className="calendarContainer">
@@ -45,15 +44,7 @@ export const CalendarPage = () => {
                 </div>
             }
 
-            <div className="btnContainer">
-                <button className='btnCircle' onClick={openModal}>
-                    <FontAwesomeIcon icon={faCalendar} />
-                </button>
-
-                <button className='btnCircle' onClick={showOrHideCalendar}>
-                    <FontAwesomeIcon icon={faCalendarDay} />
-                </button>                
-            </div>
+            <CalendarBtn openModal = {openModal} showOrHideCalendar = {showOrHideCalendar}/>
 
             <Modal
                 isOpen={modalIsOpen}
