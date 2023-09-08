@@ -1,0 +1,94 @@
+.btnCircle{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #023047;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 3px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: #457b9d;
+    }
+
+    &:active{
+        background-color: #0f4c5c;
+    }
+
+    &:focus{
+        background-color: #0f4c5c;
+    }
+
+    &:disabled{
+        background-color: #ccc;
+    }
+
+}
+
+.btnContainer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.btnClose{
+    border-radius: 10%;
+    width: 50px;
+    height: 30px;
+    background-color: #ef233c;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 3px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 15px;
+
+    &:hover{
+        background-color: #e63946;
+    }
+
+    &:active{
+        background-color: #e63946;
+    }
+
+    &:focus{
+        background-color: #e63946;
+    }
+
+    &:disabled{
+        background-color: #ccc;
+    }
+}
+
+.align-end{
+    display: flex;
+    justify-content: end;
+}
+
+.calendarContainer{
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    width: 40rem;
+    height: 25rem;
+    padding: 15px;
+    /* background-color: #e9ecef; */
+    overflow: auto;
+}
