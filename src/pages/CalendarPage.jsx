@@ -3,7 +3,9 @@ import "./CalendarPage.css"
 import { CalendarBtn, ExampleGrid } from "../components";
 
 import { CalendarApp } from '../CalendarApp'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Modal from 'react-modal';
+import { faUpRightAndDownLeftFromCenter } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
 
 export const CalendarPage = () => {
@@ -40,11 +42,14 @@ export const CalendarPage = () => {
             {
                 calendarIsOpen &&                
                 <div className="calendarContainer">
+                    <button className="btnExpand" onClick={openModal}>
+                        <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} />
+                    </button>
                     <CalendarApp/>
                 </div>
             }
 
-            <CalendarBtn openModal = {openModal} showOrHideCalendar = {showOrHideCalendar}/>
+            <CalendarBtn showOrHideCalendar = {showOrHideCalendar}/>
 
             <Modal
                 isOpen={modalIsOpen}

@@ -90,11 +90,28 @@
     padding: 15px;
     overflow: auto;
     display: flex;
-    justify-content: end;
-    /* z-index: 99999; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: end;
+    /* flex-wrap: wrap; */
+    
+    /* justify-content: end; */
     bottom: 80px;
     right: 10px;
-    /* background-color: #e9ecef; */
+}
+
+.btnExpand{
+    width: auto;
+    height: auto;
+    border-radius: 7px;
+    background-color: #023047;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 10px 0;
+
 }
 
 .row{

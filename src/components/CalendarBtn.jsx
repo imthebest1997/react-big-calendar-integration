@@ -1,16 +1,13 @@
-// import "../Pages/CalendarPage.css"
-
-import { faCalendar, faCalendarDay } from '@fortawesome/free-solid-svg-icons'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { PropTypes } from 'prop-types'
+import { faCalendarDay } from '@fortawesome/free-solid-svg-icons'
 
-export const CalendarBtn = ({openModal, showOrHideCalendar}) => {
+export const CalendarBtn = ({showOrHideCalendar}) => {
     return (
         <div className="btnContainer">
-            <button className='btnCircle' onClick={openModal}>
+            {/* <button className='btnCircle' onClick={openModal}>
                 <FontAwesomeIcon icon={faCalendar} />
-            </button>
+            </button> */}
 
             <button className='btnCircle' onClick={showOrHideCalendar}>
                 <FontAwesomeIcon icon={faCalendarDay} />
